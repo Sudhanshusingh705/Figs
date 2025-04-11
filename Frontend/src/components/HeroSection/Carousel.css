@@ -1,0 +1,125 @@
+.carousel {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 500px;
+}
+
+.carousel__container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.carousel__slide--active {
+  opacity: 1;
+  z-index: 1;
+}
+
+.carousel__content {
+  max-width: 600px;
+  padding: 2rem;
+  margin-left: 10%;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 4px;
+}
+
+.carousel__title {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.carousel__subtitle {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.carousel__arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 2;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__arrow:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.carousel__arrow--prev {
+  left: 20px;
+}
+
+.carousel__arrow--next {
+  right: 20px;
+}
+
+.carousel__indicators {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  z-index: 2;
+}
+
+.carousel__indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.carousel__indicator--active {
+  background-color: #fff;
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    height: 400px;
+  }
+
+  .carousel__content {
+    max-width: 100%;
+    margin-left: 0;
+    padding: 1rem;
+  }
+
+  .carousel__title {
+    font-size: 1.8rem;
+  }
+
+  .carousel__subtitle {
+    font-size: 1rem;
+  }
+} 

@@ -1,0 +1,92 @@
+.select {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.select--full-width {
+  width: 100%;
+}
+
+.select__label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--text-color);
+}
+
+.select__required {
+  color: var(--error-color);
+  margin-left: 0.25rem;
+}
+
+.select__wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.select__field {
+  width: 100%;
+  padding: 0.75rem 2.5rem 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  background-color: white;
+  appearance: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+}
+
+.select__field:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.select__field:disabled {
+  background-color: var(--background-color-light);
+  cursor: not-allowed;
+}
+
+.select--error .select__field {
+  border-color: var(--error-color);
+}
+
+.select--error .select__field:focus {
+  box-shadow: 0 0 0 2px var(--error-color-light);
+}
+
+.select__arrow {
+  position: absolute;
+  right: 1rem;
+  pointer-events: none;
+  color: var(--text-color-light);
+  font-size: 0.75rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.select__field:focus + .select__arrow {
+  transform: rotate(180deg);
+}
+
+.select__helper {
+  font-size: 0.75rem;
+  color: var(--text-color-light);
+}
+
+.select__helper--error {
+  color: var(--error-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .select__field {
+    padding: 0.5rem 2rem 0.5rem 0.75rem;
+    font-size: 0.875rem;
+  }
+
+  .select__arrow {
+    right: 0.75rem;
+  }
+} 

@@ -1,0 +1,236 @@
+/* 
+  Responsive CSS
+  Global responsive styles for the entire application
+*/
+
+/* Container responsiveness */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+}
+
+.col {
+  padding: 0 15px;
+  flex: 1;
+}
+
+/* Images responsiveness */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Typography responsiveness */
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1.3;
+}
+
+/* Form elements responsiveness */
+input, select, textarea, button {
+  max-width: 100%;
+}
+
+/* Global Media Queries */
+@media (max-width: 1400px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 960px;
+  }
+  
+  h1 {
+    font-size: calc(1.375rem + 1.5vw);
+  }
+  
+  h2 {
+    font-size: calc(1.325rem + 0.9vw);
+  }
+  
+  h3 {
+    font-size: calc(1.3rem + 0.6vw);
+  }
+}
+
+@media (max-width: 992px) {
+  .container {
+    max-width: 720px;
+  }
+  
+  /* Adjust columns for tablet */
+  .col-md-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-md-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  .col-md-4 {
+    flex: 0 0 33.333333%;
+    max-width: 33.333333%;
+  }
+  
+  /* Stack columns on tablet */
+  .row-cols-md-1 > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .row-cols-md-2 > .col {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Add more spacing for stacked elements */
+  .stacked-on-md {
+    margin-bottom: 1.5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 540px;
+  }
+  
+  /* Adjust columns for mobile */
+  .col-sm-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  .col-sm-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
+  }
+  
+  /* Stack columns on mobile */
+  .row-cols-sm-1 > .col {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Hidden elements on mobile */
+  .d-sm-none {
+    display: none !important;
+  }
+  
+  /* Adjust font sizes for mobile */
+  body {
+    font-size: 0.95rem;
+  }
+  
+  h1 {
+    font-size: calc(1.3rem + 1vw);
+  }
+  
+  h2 {
+    font-size: calc(1.25rem + 0.5vw);
+  }
+  
+  h3 {
+    font-size: calc(1.2rem + 0.3vw);
+  }
+  
+  /* Adjustments for form elements on mobile */
+  input, select, textarea {
+    font-size: 16px; /* Prevents zoom on iOS devices */
+  }
+  
+  /* Button sizing on mobile */
+  .btn-responsive {
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Add more spacing for stacked elements */
+  .stacked-on-sm {
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Padding & margin adjustments for mobile */
+  .p-sm-3 {
+    padding: 1rem !important;
+  }
+  
+  .m-sm-3 {
+    margin: 1rem !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .container {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+  
+  /* Adjust columns for small mobile */
+  .col-xs-12 {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+  
+  /* Stack all columns on small mobile */
+  .row {
+    flex-direction: column;
+  }
+  
+  /* Very small devices text adjustments */
+  body {
+    font-size: 0.9rem;
+  }
+  
+  h1 {
+    font-size: calc(1.25rem + 0.7vw);
+  }
+  
+  h2 {
+    font-size: calc(1.2rem + 0.3vw);
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  /* Spacing adjustments for very small screens */
+  .p-xs-2 {
+    padding: 0.5rem !important;
+  }
+  
+  .m-xs-2 {
+    margin: 0.5rem !important;
+  }
+  
+  /* Button sizing on small mobile */
+  .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+  }
+}
+
+/* Orientation responsiveness */
+@media (orientation: landscape) and (max-height: 500px) {
+  /* Adjustments for landscape mode on mobile */
+  .vh-100 {
+    height: auto !important;
+    min-height: 100vh;
+  }
+  
+  .fixed-height-section {
+    height: auto !important;
+    padding: 3rem 0;
+  }
+} 

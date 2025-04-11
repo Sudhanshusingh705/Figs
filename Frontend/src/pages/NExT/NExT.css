@@ -1,0 +1,276 @@
+.next-page {
+  padding-top: 70px; /* Account for fixed header */
+}
+
+.next-banner {
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('/images/next/banner.jpg');
+  background-size: cover;
+  background-position: center;
+  color: #fff;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.banner-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.next-banner h1 {
+  font-size: 2.8rem;
+  margin-bottom: 1.5rem;
+}
+
+.next-banner p {
+  font-size: 1.2rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.banner-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary {
+  background-color: #007bff;
+  color: #fff;
+  border: 2px solid #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: #fff;
+  border: 2px solid #fff;
+}
+
+.btn-outline:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Overview Section */
+.next-overview {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.next-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.next-info h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1.5rem;
+  color: #333;
+}
+
+.next-info p {
+  margin-bottom: 1.5rem;
+  color: #555;
+  font-size: 1.1rem;
+  line-height: 1.6;
+}
+
+.next-features {
+  list-style: none;
+  padding: 0;
+  margin: 2rem 0 0 0;
+}
+
+.next-features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.next-features .icon {
+  color: #28a745;
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+}
+
+.next-image img {
+  width: 100%;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Courses Section */
+.next-courses {
+  padding: 5rem 0;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-header h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.section-header p {
+  color: #666;
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Process Section */
+.next-process {
+  padding: 5rem 0;
+  background-color: #f8f9fa;
+}
+
+.process-steps {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 3rem;
+}
+
+.process-step {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  position: relative;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.process-step:hover {
+  transform: translateY(-5px);
+}
+
+.step-number {
+  width: 40px;
+  height: 40px;
+  background-color: #007bff;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 0 auto 1.5rem auto;
+}
+
+.step-content h3 {
+  font-size: 1.3rem;
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.step-content p {
+  color: #666;
+  margin: 0;
+}
+
+/* Testimonials Section */
+.next-testimonials {
+  padding: 5rem 0;
+}
+
+/* CTA Section */
+.next-cta {
+  padding: 5rem 0;
+  background: linear-gradient(to right, #007bff, #0099ff);
+  color: #fff;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.cta-content h2 {
+  font-size: 2.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta-content p {
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+  opacity: 0.9;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
+
+.next-cta .btn-primary {
+  background-color: #fff;
+  color: #007bff;
+  border-color: #fff;
+}
+
+.next-cta .btn-primary:hover {
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+.next-cta .btn-outline {
+  border-color: #fff;
+}
+
+/* Responsive Styles */
+@media (max-width: 992px) {
+  .next-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .next-image {
+    order: -1;
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .next-banner {
+    padding: 4rem 0;
+  }
+  
+  .next-banner h1 {
+    font-size: 2rem;
+  }
+  
+  .banner-buttons {
+    flex-direction: column;
+  }
+  
+  .next-overview,
+  .next-courses,
+  .next-process,
+  .next-testimonials,
+  .next-cta {
+    padding: 3rem 0;
+  }
+  
+  .section-header h2 {
+    font-size: 1.8rem;
+  }
+} 

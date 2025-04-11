@@ -1,0 +1,115 @@
+/* Admin Layout Styles */
+.admin-layout {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+}
+
+.admin-content {
+  display: flex;
+  padding-top: 60px;
+}
+
+.admin-main {
+  flex: 1;
+  padding: 2rem;
+  transition: all 0.3s ease;
+}
+
+/* Dashboard Card Styles */
+.admin-dashboard .card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+  background: white;
+}
+
+.admin-dashboard .card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.15);
+}
+
+.admin-dashboard .card-body {
+  padding: 1.5rem;
+}
+
+.admin-dashboard .card-title {
+  color: #5a5c69;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 1rem;
+}
+
+.admin-dashboard .card-text.h2 {
+  color: #2e384d;
+  font-weight: 700;
+  margin: 0;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Header Styles */
+.admin-header .navbar {
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(90deg, #1a237e 0%, #283593 100%) !important;
+}
+
+.admin-header .navbar-brand {
+  font-weight: 700;
+  font-size: 1.5rem;
+  background: linear-gradient(45deg, #fff, #e3f2fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: all 0.3s ease;
+}
+
+.admin-header .nav-link {
+  color: rgba(255, 255, 255, 0.9) !important;
+  transition: all 0.3s ease;
+}
+
+.admin-header .nav-link:hover {
+  color: #fff !important;
+  transform: translateY(-1px);
+}
+
+/* Animation Classes */
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.slide-in {
+  animation: slideIn 0.5s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .admin-content {
+    flex-direction: column;
+  }
+  
+  .admin-dashboard .card {
+    margin-bottom: 1rem;
+  }
+} 

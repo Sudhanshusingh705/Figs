@@ -1,0 +1,188 @@
+.article {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.article-header {
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+.article-header h1 {
+  margin: 0 0 1rem;
+  color: #333;
+  font-size: 2.5rem;
+  line-height: 1.2;
+}
+
+.article-meta {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  color: #666;
+  font-size: 0.9rem;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.meta-item svg {
+  font-size: 1rem;
+  color: #007bff;
+}
+
+.article-content {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 3rem;
+}
+
+.article-content p {
+  margin-bottom: 1.5rem;
+}
+
+.article-content h2 {
+  margin: 2rem 0 1rem;
+  color: #333;
+}
+
+.article-content img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin: 2rem 0;
+}
+
+.article-content blockquote {
+  margin: 2rem 0;
+  padding: 1rem 2rem;
+  border-left: 4px solid #007bff;
+  background: #f8f9fa;
+  font-style: italic;
+  color: #555;
+}
+
+.article-footer {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+}
+
+.author-info {
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+}
+
+.author-avatar {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.author-details {
+  flex: 1;
+}
+
+.author-details h3 {
+  margin: 0 0 0.5rem;
+  color: #333;
+  font-size: 1.2rem;
+}
+
+.author-details h4 {
+  margin: 0 0 0.5rem;
+  color: #007bff;
+  font-size: 1.1rem;
+}
+
+.author-details p {
+  margin: 0;
+  color: #666;
+  line-height: 1.6;
+}
+
+.article-navigation {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid #eee;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-link {
+  color: #007bff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: color 0.2s;
+}
+
+.nav-link:hover {
+  color: #0056b3;
+}
+
+.nav-link.prev {
+  margin-right: auto;
+}
+
+.nav-link.next {
+  margin-left: auto;
+}
+
+.loading, .error {
+  text-align: center;
+  padding: 3rem;
+  font-size: 1.1rem;
+}
+
+.error {
+  color: #dc3545;
+}
+
+@media (max-width: 768px) {
+  .article {
+    padding: 1rem;
+  }
+
+  .article-header h1 {
+    font-size: 2rem;
+  }
+
+  .article-meta {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .author-info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .author-details {
+    text-align: center;
+  }
+
+  .article-navigation {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .nav-link.prev,
+  .nav-link.next {
+    margin: 0;
+    justify-content: center;
+  }
+} 
